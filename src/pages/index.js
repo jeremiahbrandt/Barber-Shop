@@ -5,7 +5,7 @@ import Map from "../components/Map"
 import { graphql } from "gatsby"
 import {useTestimonials} from '../hooks/useTestimonials'
 import '../style/style.sass'
-import '../style/Testimonials.sass'
+import '../style/testimonials.sass'
 import '../style/stars.sass'
 
 const Stars = (props) => {
