@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import '../style/appointment.sass'
 import { useServices } from "../hooks/useServices"
 import useTimes from "../hooks/useTimes"
