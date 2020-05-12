@@ -1,0 +1,118 @@
+.business-hours
+    display: grid
+    grid-template-rows: 30px 20px 20px
+    grid-row-gap: 5px
+    text-align: center
+    align-items: center
+    margin: 10px 0px 0px 0px
+
+.business-hours .title
+    font-size: 30px
+
+.business-hours .content
+    font-size: 20px
+
+.appointments-title
+    text-align: center
+    font-size: 25px
+    margin: 10px 0px 0px 0px
+
+// Form Grid    
+.reservation-form
+    display: grid
+    justify-content: center
+    .section
+        display: grid
+        grid-template-areas: 'description' 'input'
+        grid-template-columns: 100%
+        grid-column-gap: 10px
+        grid-row-gap: 5px
+        justify-content: center
+        justify-items: center
+        align-content: center
+
+    @media screen and ( min-width: 768px )
+        .section
+            grid-template-areas: 'description input'    
+            grid-template-columns: 120px 100%
+
+    .description
+        grid-area: description
+        display: grid
+
+    .input
+        grid-area: input
+
+//Form Sizing
+.reservation-form
+    height: 300px
+
+.reservation-form .input
+    width: calc(100% - 20px)
+    min-width: 100px
+    max-width: 250px
+    height: 40px
+
+.reservation-form .section
+    margin: 10px 0px 0px 0px
+
+.reservation-form .submit
+    margin: 10px 0px 10px 0px
+    width: 200px
+    height: 40px
+
+//Form Text
+.reservation-form
+    text-align: center
+
+    .description
+        font-size: 17px
+        align-content: center
+
+    .input
+        padding: 0px 0px 0px 10px
+
+@media screen and ( min-width: 768px )
+    .reservation-form
+        text-align: right
+
+//Form Border
+.reservation-form .input
+    border-radius: 5px
+    border: 1px solid black
+
+.reservation-form .submit
+    border-radius: 5px
+    border: 1px solid black
+
+// Form Colors
+$input-background-color: #ffffff
+$input-color: #4e0c0c
+$submit-background-color: #4e0c0c
+$submit-background-color-hover: #270606
+$submit-color: #f3efef
+$submit-color-hover: #f3efef
+
+.reservation-form .input
+    background-color: $input-background-color
+    color: $input-color
+
+.reservation-form .submit
+    background-color: $submit-background-color
+    color: $submit-color
+
+.reservation-form .submit:hover
+    background-color: $submit-background-color-hover
+    color: $submit-color-hover
+
+// Form Transitions & Visibility
+.reservation-form .section
+    opacity: 0
+    transition: opacity 0.5s linear
+
+.reservation-form .submit
+    opacity: 0
+    transition: opacity 0.5s linear
+
+.reservation-form .active
+    opacity: 1

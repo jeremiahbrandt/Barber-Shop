@@ -1,0 +1,116 @@
+$barber-primary: #c4bebe
+$barber-secondary: #4e0c0c
+    
+.barbers-wrapper
+    display: grid
+    overflow: hidden
+
+.individual-barber-wrapper
+    display: grid
+    justify-items: center
+    width: 100%
+    height: 450px
+   
+.individual-barber-wrapper
+    &:before
+        outline: none
+        height: 0
+        width: auto
+        content: ""
+
+.individual-barber-wrapper:nth-child(odd)
+    background-color: $barber-secondary
+    justify-items: left
+    &:before
+        border-left: 100vw solid transparent
+        border-right: 0px solid transparent
+        border-bottom: 80px solid $barber-secondary
+        background-color: $barber-primary
+
+.individual-barber-wrapper:nth-child(even)
+    border-color: blue
+    background-color: $barber-primary
+    &:before
+        border-left: 0px solid transparent
+        border-right: 100vw solid transparent
+        border-bottom: 80px solid $barber-primary
+        background-color: $barber-secondary
+
+    
+
+.individual-barber-wrapper:nth-child(1)
+    height: 375px
+    &:before
+        border: none
+        height: 0px
+        border-bottom: 0px solid $barber-secondary
+        background-color: $barber-primary
+        
+@media screen and ( min-width: 600px )
+    .individual-barber-wrapper:nth-child(even)
+        justify-items: right
+
+    .individual-barber-wrapper:nth-child(odd)
+        justify-items: left
+        
+.barber
+    display: grid
+    grid-column-gap: 10px
+    text-align: center
+    align-content: center
+    justify-items: center
+    padding: 0px 20px 0px 20px
+    margin: 0px 0px 30px 0px
+    width: 100%
+
+@media screen and ( min-width: 0px )
+    .barber
+        grid-template-columns: 1fr   
+        grid-template-areas: 'image' 'bio'
+
+@media screen and ( min-width: 600px )
+    .barber
+        grid-template-rows: 300px auto
+        grid-template-columns: auto
+        grid-template-areas: 'image bio'
+
+.individual-barber-wrapper:nth-child(odd)
+    .barber
+        color: $barber-primary
+
+.individual-barber-wrapper:nth-child(even)
+    .barber
+        color: $barber-secondary
+
+@media screen and ( min-width: 600px )
+    .individual-barber-wrapper:nth-child(odd)
+        .barber
+            grid-template-areas: 'image bio'
+            grid-template-columns: 300px auto
+
+    .individual-barber-wrapper:nth-child(even)
+        .barber
+            grid-template-areas: 'bio image'
+            grid-template-columns: auto 300px
+
+.barber-image
+    grid-area: image
+    border-radius: 80% / 25%
+    width: 100%
+    height: 100%
+    max-width: 300px
+    max-height: 300px
+
+.info
+    color: inherit
+    grid-area: bio
+    display: grid
+    align-content: center
+
+.bio-title
+    color: inherit
+    font-size: 35px
+
+.bio
+    color: inherit
+

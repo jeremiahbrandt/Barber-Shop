@@ -1,0 +1,128 @@
+// Layout
+.site-title
+    grid-area: title
+    margin: 10px 0px 10px 30px
+    padding: 10px 0px 10px 0px
+    border-radius: 5px
+    display: inline-block
+    text-align: center
+    align-self: center
+
+.navigation
+    display: grid
+    justify-content: space-between
+    width: 100vw
+
+.hamburger
+    margin-right: 30px
+    display: grid
+    grid-area: hamburger
+    align-content: space-evenly
+    width: 50px
+    height: 50px
+    justify-self: right
+
+.hamburger-line
+    height: 5px
+    width: 100%
+    border-radius: 5px
+
+@media screen and ( min-width: 0px )
+    .navigation
+        grid-template-rows: 50px 0px
+        grid-template-columns: 250px 50px
+        grid-template-areas: 'title hamburger' 'navigation-link-container navigation-link-container'
+        
+
+    .navigation-link-container
+        grid-area: navigation-link-container
+        height: 0px
+        grid-template-rows: repeat(3, auto)
+        justify-content: space-around
+        width: 100vw
+        display: grid
+
+    .navigation-link-container-active
+        height: calc(100vh - 50px)
+        background-color: red
+
+    .navigation-link
+        display: grid
+        height: 50px
+        justify-content: center
+        align-content: center
+        text-align: center
+        width: 100vw
+
+    .navigation-link-container-active .navigation-link
+        height: auto
+
+@media screen and ( min-width: 776px )
+    .navigation
+        grid-template-rows: 50px
+        grid-template-columns: 250px auto
+        grid-template-areas: 'title navigation-link-container navigation-link-container'
+
+    .hamburger
+        display: none
+
+    .navigation-link-container
+        height: 50px
+        justify-content: space-evenly
+        width: calc( 100vw - 250px)
+        grid-template-columns: repeat(3, 1fr)
+
+    .navigation-link
+        width: 100%
+
+// Transitions & Visibility
+.navigation
+    position: absolute
+    z-index: 1
+
+.navigation:hover
+    opacity: 1
+
+@media screen and ( min-width: 0px )
+    .navigation-link-container
+        opacity: 0
+        visibility: hidden
+        transition: height 0.75s, opacity 0.75s linear
+
+    .navigation-link-container-active
+        opacity: 1
+        visibility: visible
+
+@media screen and ( min-width: 776px )
+    .navigation-link-container
+        opacity: 1
+        visibility: visible
+
+// Colors
+$navigation-background-color: #4e0c0c
+$hamburger-line-background-color: #ecd4d4
+$navigation-link-color: #d4d1d1
+$navigation-link-background-color-hover: #270606 
+$navigation-link-color-hover: #f3efef
+
+.site-title
+    font-family: 'balsamiq sans'
+    font-size: 20px
+
+.navigation
+    background-color: $navigation-background-color
+    border-bottom: 1px solid $navigation-link-color
+
+.navigation-link
+    color: $navigation-link-color
+    font-size: 20px
+
+.navigation-link:hover
+    background-color: $navigation-link-background-color-hover
+    color: $navigation-link-color-hover
+
+.navigation-link-container
+    background-color: $navigation-background-color
+
+.hamburger-line
+    background-color: $hamburger-line-background-color

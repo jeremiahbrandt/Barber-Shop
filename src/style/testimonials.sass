@@ -1,0 +1,73 @@
+// Grid
+.testimonials
+    display: grid
+    grid-template-areas: 'testimonials-title' 'testimonials'
+
+.testimonials-title
+    grid-area: testimonials-title
+
+.testimonials-wrapper
+    grid-area: testimonials
+    display: grid
+    grid-column-gap: 20px
+
+@media screen and ( min-width: 0px )
+    .testimonials-wrapper
+        grid-template-columns: repeat(1, auto)
+    
+@media screen and ( min-width: 600px )
+    .testimonials-wrapper
+        grid-template-columns: repeat(3, auto)
+    
+
+.testimonial
+    display: grid
+    grid-template-areas: 'title' 'rating' 'date' 'html' 'author'
+
+.testimonial-title
+    grid-area: title
+
+.rating
+    grid-area: rating
+
+.testimonial .date
+    grid-area: date
+
+.html
+    grid-area: html
+
+.author
+    grid-area: author
+
+// Alignment
+.testimonials-title
+    text-align: center
+
+.testimonial-title
+    text-align: center
+
+.rating
+    text-align: center
+
+.testimonial .date
+    text-align: right
+
+.html
+    text-align: left
+
+.author
+    text-align: right
+
+// Margins
+.testimonials
+    margin: 20px 0px 20px 0px
+
+.testimonials-wrapper
+    margin: 10px 50px 10px 50px
+
+// Text Decoration
+.testimonials-title
+    font-size: 35px
+
+.testimonial-title
+    font-size: 20px
