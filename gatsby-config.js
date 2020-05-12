@@ -9,6 +9,7 @@ module.exports = {
         ]
       }
     },    
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
     `gatsby-image`,
     `gatsby-plugin-sharp`,

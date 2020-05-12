@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import Slideshow from "../components/Slideshow"
 import Map from "../components/Map"
+import {Helmet} from 'react-helmet'
 import { graphql } from "gatsby"
 import {useTestimonials} from '../hooks/useTestimonials'
 import '../style/style.sass'
@@ -78,9 +79,11 @@ const TestimonialContainer = (testimonials) => {
 
 const IndexPage = ({data}) => (
     <Layout className='layout'>
-        <Slideshow images={data.allFile.edges} />
-        <TestimonialContainer />
-        {/* <Map /> */}
+        {/* <Helmet> */}
+          <Slideshow images={data.allFile.edges} />
+          <TestimonialContainer />
+          {/* <Map /> */}
+        {/* </Helmet> */}
     </Layout>
 )
 

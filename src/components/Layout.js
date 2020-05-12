@@ -7,9 +7,9 @@ import { useSocials } from '../hooks/useSocials'
 
 const Title = () => {
     return (
-        <div className='site-title'>
+        <a href='/' className='site-title'>
             Joe's Barber Shop
-        </div>
+        </a>
     )
 }
 
