@@ -25,9 +25,9 @@ const Navigation = () => {
             <Title />
             <Hamburger handleClick={handleClick} />
             <div className={`navigation-link-container ${active ? 'navigation-link-container-active': ''}`} role='navigation'>
-                <Link to ='/' className='navigation-link'>Home</Link>
-                <Link to ='/appointment' className='navigation-link'>Schedule an Appointment</Link>
-                <Link to ='/barbers' className='navigation-link'>Meet the Barbers</Link>
+                <Link to ='/barber-shop/' className='navigation-link'>Home</Link>
+                <Link to ='/barber-shop/appointment' className='navigation-link'>Schedule an Appointment</Link>
+                <Link to ='/barber-shop/barbers' className='navigation-link'>Meet the Barbers</Link>
             </div>
         </div>
     )
