@@ -41,8 +41,12 @@ const AppointmentScheduler = () => {
         console.log(minDate)
     },[])
 
+    const handleSubmit = (e) => {
+        e.preventDefault()
+    }
+
     return (
-        <form className='reservation-form'>
+        <form className='reservation-form' onSubmit={handleSubmit}>
                 <label className={`section date ${dateActive ? 'active' : ''}`}>
                     <div className='description'>Available Days</div>
                     <input type='date' name='date' className='input' value={dateValue} onChange={handleDateChange} />
