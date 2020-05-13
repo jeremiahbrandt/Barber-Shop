@@ -1,10 +1,6 @@
-import React from 'react'
-import Layout from '../components/Layout'
+import React from "react"
+import Layout from "../components/Layout"
 
 export default function Page() {
-    return (
-        <Layout>
-            Page not Found
-        </Layout>
-    )
+  return <Layout>Page not Found</Layout>
 }
