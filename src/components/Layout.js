@@ -142,13 +142,15 @@ const Footer = () => {
   )
 }
 
-const Layout = ({ children }) => {
+const Layout = (props) => {
+  const { children } = props
   return (
     <div className="layout">
       <div className="header">
         <Navigation />
       </div>
-      <div className="main-content">{children}</div>
+      {/* props.className is a hack used for barber-page */}
+      <div className={`main-content ${props.className}`}>{children}</div>
       <Footer />
     </div>
   )

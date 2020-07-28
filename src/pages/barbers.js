@@ -7,7 +7,7 @@ import "../style/barbers.sass"
 const BarbersPage = () => {
   const barbers = useBarbers()
   return (
-    <Layout>
+    <Layout className="main-content-barber-page">
       <div className="barbers-wrapper">
         {barbers.map((currBarber, index) => {
           return (
