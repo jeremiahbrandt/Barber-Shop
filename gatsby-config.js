@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/Barber-Shop",
   plugins: [
     {
       resolve: `gatsby-plugin-google-fonts`,
